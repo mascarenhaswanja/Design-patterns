@@ -8,7 +8,9 @@ Lab Oracle
 
 Solidity contract: OracleStock.sol (convert Symbol to ascII to bytes) 
 
-Oracle Address from Deploy in Remix 
+ABI from Remix(compilation) - copy into quotecontract.js (STOCK_ORACLE_ABI)
+
+Oracle Address from Deploy in Remix - copy into quotecontract.js (STOCK_ORACLE_ADDRESS)
 
 Use ganache-cli -d
 
