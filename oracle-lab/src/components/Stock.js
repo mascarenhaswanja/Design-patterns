@@ -7,15 +7,14 @@ function Stock() {
   const [symbol, setSymbol] = useState("");
   const [price, setPrice] = useState(0);
   const [volume, setVolume] = useState(0);
-  const [oraclePrice, setOraclePrice] = useState("");
-  const [oracleVolume, setOracleVolume] = useState("Not Defined");
+  const [oraclePrice, setOraclePrice] = useState("N/A");
+  const [oracleVolume, setOracleVolume] = useState("N/A");
 
   useEffect(() => {}, [symbol]);
 
   // From API  
   const getApi = () => {
       fetch(
-        //"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=2DRW2BS7GC61ZGWW")
         "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=" + symbol + "&apikey=2DRW2BS7GC61ZGWW")
       .then((res) => res.json())
       .then((data) => {
@@ -76,33 +75,28 @@ function Stock() {
       .then((oracleVolume) => {
         setOracleVolume(Number(oracleVolume));
       });
-              
-      /*if (resContract) {
-          console.log("blockHash", resContract);
-          console.log(`Contract address: ${STOCK_ORACLE_ADDRESS}`);
-      } else {
-          console.log("Error: getStock");
-      }  */
   };
 
-    
   return (
       <div>
-        <h1>Oracle - Stock</h1>
-        <input type="text" placeholder="Symbol to fetch"
+        <header>
+          <h1>Oracle - Stock</h1>
+        </header>
+        <label>Symbol of Stock to Get From API</label>
+        <input type="text" placeholder="SYMBOL"
               onChange={(event) => setSymbol(event.target.value)}>
         </input>
         <hr/>
-        <button onClick={getApi}>From API</button>
+        <button onClick={getApi}>Get Information API</button>
         <p>
           Symbol: {symbol} <br/>
           Price : {price}  <br/>
           Volume: {volume}
         </p>
         <hr/>
-        <button onClick={setInfoOracle}>Set Oracle</button>
+        <button onClick={setInfoOracle}>Set Oracle from API</button>
         <hr/>
-        <button onClick={getInfoOracle}>Get Oracle</button>
+        <button onClick={getInfoOracle}>Get Information from Oracle</button>
         <p>
           Symbol: {symbol} <br/>
           Oracle Price : {oraclePrice} <br/>

@@ -1,6 +1,7 @@
 //  contract address from Deploy in Remix
 export const STOCK_ORACLE_ADDRESS =
-  "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B";
+  //"0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B";
+  "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24";
 
 //  contract ABI from Compile Remix
 export const STOCK_ORACLE_ABI =
