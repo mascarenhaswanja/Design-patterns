@@ -6,8 +6,10 @@ Lab Oracle
 4. Write the data to the smart contract
 5. Read back from the smart contract
 
-Solidity contract: OracleStock.sol (convert Symbol to ascII to bytes)
-Oracle Address from Deploy in Remix
+Solidity contract: OracleStock.sol (convert Symbol to ascII to bytes) 
+
+Oracle Address from Deploy in Remix 
+
 Use ganache-cli -d
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
