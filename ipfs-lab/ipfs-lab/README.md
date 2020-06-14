@@ -6,10 +6,11 @@ Lab IPFS
 4. Retrieve file
 5. Display on webpage
 
-Allow Cross-Origin Resource Sharing (CORS) use HTTP he
-Cross-Origin Resource Sharing (CORS) to allow web application have permission to access origin
+Notes:
+Cross-Origin Resource Sharing (CORS) to allow web application have permission to access origin 
 
-$ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["*"]'
+$ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["*"]'  
+
 $ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST"]'
 
 OR 
@@ -22,7 +23,7 @@ Create a file Json with this configuration
             }
     }
 
-Copy generated Hash to download form IPFS
+Copy generated Hash to download from IPFS
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
